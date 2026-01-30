@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* ハンバーガーメニューのスタイル */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 10; /* メニューより前に表示 */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: pink; /* ボタンの色 */
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* メニューのスタイル */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 245, 246, 1) 0%, rgba(227, 201, 221, 1) 50%, rgba(186, 108, 139, 1) 100%);
+  opacity: 0; /* 初期状態は透明 */
+  pointer-events: none; /* クリック不可 */
+  transition: opacity 0.5s ease; /* フェードインのアニメーション */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+/* メニューが開いたとき */
+.menu.open {
+  opacity: 1; /* 不透明にする */
+  pointer-events: auto; /* クリック可能にする */
+}
+
+/* バツ印に変わるハンバーガーボタン */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0; /* 真ん中の線を透明にする */
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu ul {
+  list-style: none;  /* ドットを非表示 */
+  padding: 0;        /* 左余白も消す */
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 0;   /* li の上下余白で調整 */
+}
+
+.menu a {
+  text-decoration: none;  /* リンク下線を消す */
+  color: #333;            /* 色を指定 */
+  font-size: 18px;        /* 好みのサイズ */
+  font-size: 50px;
+  font-weight: 700;
+  color: #9D8989;
+  font-family: Source Serif Pro, serif;
+}
