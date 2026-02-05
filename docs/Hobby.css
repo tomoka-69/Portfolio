@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url("./img/hobby.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+
+#text_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#mine {
+  font-size: 30px;
+  font-family: "Source Serif Pro", serif;
+  text-align: center;
+  color: #A0C9DF;
+}
+
+#text {
+  width: 83%;
+  height: auto;
+  border-radius: 40px;
+  border-color: rgba(218, 183, 95, 0.441);
+  border-width: 3px;
+  border-style: solid;
+  background: rgba(255, 255, 255, 0.418);
+  font-size: 35px;
+}
+
+#hobby_title {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Source Serif Pro", serif;
+  font-size: 80px;
+  font-weight: 500;
+  -webkit-text-fill-color: #88BBD3;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+#goods_id {
+  display: flex;
+  flex-direction: column;
+  gap: 38rem;
+}
+
+.goods_all {
+  position: relative;
+  width: 50%;
+  height: 500px;
+}
+
+#goods1 {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+#goods1 img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+}
+
+#goods1 #img_one {
+  top: 150px;        /* 上からの位置 */
+  z-index: 0;
+  left: 140px;
+  width: 65%;
+  height: auto;
+}
+
+#goods1 #img_1 {
+  top: -30px;
+  right: 30px;
+  transform: rotate(90deg);
+  transform-origin: center;  /* 回転の中心 */
+  z-index: 1;
+}
+
+#goods2 {
+  position: relative;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+}
+
+#goods2 img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+}
+
+#goods2 #img_two {
+  top: 70px;        /* 上からの位置 */
+  z-index: 0;
+  left: 120px;
+  width: 70%;
+  height: auto;
+}
+
+#goods2 #img_2 {
+  top: -30px;
+  right: 40px;
+  z-index: 1;
+}
+
+#goods3 {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+#goods3 img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+}
+
+#goods3 #img_three {
+  top: 10px;
+  z-index: 0;
+  left: 130px;
+  width: 65%;
+  height: auto;
+}
+
+#goods3 #img_3 {
+  top: -30px;
+  left: 50px;
+  z-index: 1;
+}
+
+#goods4 {
+  position: relative;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+}
+
+#goods4 img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+}
+
+#goods4 #img_four {
+  top: 70px;        /* 上からの位置 */
+  z-index: 0;
+  left: 120px;
+  width: 70%;
+  height: auto;
+}
+
+#goods4 #img_4 {
+  top: -30px;
+  right: 40px;
+  z-index: 1;
+}
+
+#goods5 {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+#goods5 img {
+  position: absolute;
+  width: 75%;
+  height: auto;
+}
+
+#goods5 #img_five {
+  top: 50px;        /* 上からの位置 */
+  z-index: 0;
+  left: 170px;
+  width: 65%;
+  height: auto;
+  transform: rotate(-85deg);
+}
+
+#goods5 #img_5 {
+  top: -30px;
+  right: 30px;
+  transform: rotate(90deg);
+  transform-origin: center;  /* 回転の中心 */
+  z-index: 1;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 0;
+  transition: 0.4s;
+  box-shadow: 2px 2px 4px rgba(38, 159, 145, 0.525);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255) 0%, rgba(190, 255, 239, 0.5) 50%, rgba(119, 246, 255, 0.5) 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+  box-shadow: 1px 2px 4px rgba(67, 163, 161, 0.525);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  box-shadow: 0 2px 4px rgba(67, 163, 161, 0.525);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
+  box-shadow: -2px 2px 4px rgba(67, 163, 161, 0.525);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #9D8989;
+  font-family: Source Serif Pro, serif;
+}
